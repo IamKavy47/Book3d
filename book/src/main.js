@@ -1,3 +1,7 @@
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import * as maath from 'maath';
+
 // Book constants
 const PAGE_WIDTH = 1.28;
 const PAGE_HEIGHT = 1.71; // ~4:3 aspect ratio
