@@ -1,6 +1,8 @@
+// main.js - This file will import dependencies and initialize your app
+
+// Import Three.js modules properly for ES modules environment
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import * as maath from 'maath';
 
 // Book constants
 const PAGE_WIDTH = 1.28;
@@ -133,8 +135,8 @@ function init() {
   directionalLight.shadow.mapSize.height = 1024;
   scene.add(directionalLight);
   
-  // Add orbit controls
-  controls = new THREE.OrbitControls(camera, renderer.domElement);
+  // Add orbit controls - Note using imported OrbitControls
+  controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
   controls.dampingFactor = 0.05;
   controls.enableZoom = true;
@@ -144,7 +146,7 @@ function init() {
   
   // Create book group
   const bookGroup = new THREE.Group();
-  bookGroup.rotation.y = Math.PI / 2;
+  bookGroup.rotation.y = Math.PI / 2.1*Math.PI;
   scene.add(bookGroup);
   
   // Create page geometry
@@ -611,5 +613,8 @@ function checkIntersection() {
   }
 }
 
-// Initialize the application
-window.addEventListener('load', init);
+// Initialize the application when the DOM is ready
+document.addEventListener('DOMContentLoaded', init);
+
+// Export init function if needed elsewhere
+export { init };
