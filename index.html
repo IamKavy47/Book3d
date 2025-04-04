@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive 3D Book</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">Interactive Book</h1>
+    <div class="book-container">
+      <div id="book-canvas"></div>
+    </div>
+    <div class="controls">
+      <button id="prev-btn" class="btn">Previous Page</button>
+      <span id="page-counter" class="page-counter">Page 0 of 12</span>
+      <button id="next-btn" class="btn">Next Page</button>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/maath@0.10.4/dist/index.umd.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
